@@ -19,7 +19,7 @@ CREATE TABLE balita (
     CONSTRAINT fk_balita_posyandu FOREIGN KEY (id_posyandu) REFERENCES posyandu(id_posyandu)
 );
 
--- 3. Tabel Transaksi: rujukan (terhubung ke kunjungan/balita)
+-- 3. Tabel Transaksi: rujukan (terhubung ke kunjungan dan balita)
 CREATE TABLE rujukan (
     id_rujukan INT PRIMARY KEY,
     id_kunjungan INT UNIQUE NOT NULL,
