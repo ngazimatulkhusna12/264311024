@@ -235,8 +235,6 @@ CREATE TABLE NOTIFIKASI (
     REFERENCES JADWAL_POSYANDU(id_jadwal) ON UPDATE CASCADE ON DELETE RESTRICT
 ) ENGINE=InnoDB;
 
--- Aturan bisnis pengganti CHECK yang melibatkan kolom FK id_jadwal.
--- JADWAL wajib memiliki id_jadwal; HASIL tidak boleh memiliki id_jadwal.
 DELIMITER $$
 CREATE TRIGGER trg_notifikasi_bi
 BEFORE INSERT ON NOTIFIKASI
